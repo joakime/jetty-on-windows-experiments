@@ -4,3 +4,11 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    ignore:
+      # Restrict updates in this branch to jetty in the 9.4.x space
+      - dependency-name: "org.eclipse.jetty.websocket:*"
+        versions: [ ">=10.0.0" ]
+      - dependency-name: "org.eclipse.jetty:*"
+        versions: [ ">=10.0.0" ]
+      - dependency-name: "javax.servlet:*"
+        versions: [ ">=4.0.0" ]
